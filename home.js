@@ -70,3 +70,12 @@ document.getElementById('avl-balance')
 
 
 })
+
+// transfer money//
+
+document.getElementById('btn-transfer')
+.addEventListener('click', function(e){
+  e.preventDefault()
+
+  const 
+})
