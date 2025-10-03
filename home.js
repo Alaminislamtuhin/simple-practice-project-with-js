@@ -1,4 +1,6 @@
 
+// add money section//
+
 const pinNub = 1245;
 
 
@@ -12,7 +14,7 @@ document.getElementById('btn-add')
 
   const avlBalance = parseInt(document.getElementById('avl-balance').innerText)
    if(account.length <11){
-    alert('please submited valid your pin')
+    alert('please  valid your account number')
     return
    }
 
@@ -28,6 +30,8 @@ document.getElementById('btn-add')
 
 })
 
+// cash out  section//
+
 document.getElementById('add-button')
 .addEventListener('click', function(){
   document.getElementById('cash-out-parent').style.display ='none'
@@ -38,4 +42,31 @@ document.getElementById('cash-button')
     document.getElementById('add-money-parent').style.display ='none'
   document.getElementById('cash-out-parent').style.display ='block'
   
+})
+ 
+const creatPin = 1234
+
+document.getElementById('btn-withdraw')
+.addEventListener('click', function(e){
+  e.preventDefault()
+  
+  const agentNumber =document.getElementById('agent-number').value
+ const  withdrawAmount = parseInt(document.getElementById('withdraw-amount').value)
+ const withdrawPin = parseInt(document.getElementById('withdraw-pin').value)
+
+ const avlBalance = parseInt(document.getElementById('avl-balance').innerText)
+ if(agentNumber.length <11){
+  alert('please valid your agent number')
+  return
+ }
+ if(withdrawPin !== creatPin ){
+  alert('please valid  your pin')
+  return
+ }
+
+ const totalNewAmount =avlBalance -withdrawAmount
+document.getElementById('avl-balance')
+.innerText =totalNewAmount
+
+
 })
