@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is the payoo event</title>
+    <!-- component -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class=" bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center ">
+    <div class=" h-[130px] w-[300px] bg-[url(./assets/bg.png)] 
+    bg-cover flex justify-center items-center">
+    <img src="assets/Group.png" alt="">
+
+    </div>
+    <form class=" bg-white rounded-2xl p-6">
+     <div>
+            <label class="font-semibold" for="">Mobile Number</label>
+              <br>
+            <input type="text" 
+            placeholder="Enter Your Number" id="Mobile-num" class="input rounded-2xl mt-3" />
+     </div>
+   <div class="mt-5">
+     
+    <label class="font-semibold" for="">Enter 4 Digit Pin</label>
+    <br>
+    <input type="text" placeholder="Enter 4 Digit Pin" id="pin-num" class="input rounded-2xl mt-3" />
+    <button id="log-in" class="btn btn-primary w-full rounded-2xl mt-5">Login</button>
+    
+   </div>
+   </form>
+
+
+   <script src="index.js"></script>
+</body>
+</html>
