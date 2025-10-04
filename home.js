@@ -19,7 +19,7 @@ document.getElementById('btn-add')
    }
 
    if(pin !== pinNub){
-    alert('please valid your pin')
+    alert('please check your pin')
     return ;
    }
   
@@ -30,19 +30,30 @@ document.getElementById('btn-add')
 
 })
 
-// cash out  section//
 
 document.getElementById('add-button')
 .addEventListener('click', function(){
   document.getElementById('cash-out-parent').style.display ='none'
+  document.getElementById('Transfer-Money-parent').style.display ='none'
   document.getElementById('add-money-parent').style.display ='block'
 })
 document.getElementById('cash-button')
 .addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display ='none'
+    document.getElementById('Transfer-Money-parent').style.display ='none'
   document.getElementById('cash-out-parent').style.display ='block'
   
 })
+
+document.getElementById('transfer-button')
+.addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display ='none'
+  document.getElementById('cash-out-parent').style.display ='none'
+  document.getElementById('Transfer-Money-parent').style.display ='block'
+  
+})
+
+// cash out setion//
  
 const creatPin = 1234
 
@@ -73,9 +84,27 @@ document.getElementById('avl-balance')
 
 // transfer money//
 
+const creatPinNumber =1234;
+
 document.getElementById('btn-transfer')
 .addEventListener('click', function(e){
   e.preventDefault()
 
-  const 
+  const userNumber = document.getElementById('user-number').value
+  const userAmount = parseInt(document.getElementById('transfer-amount').value)
+  const userPin = parseInt(document.getElementById('transfer-pin').value)
+
+  const avlBalance =parseInt(document.getElementById('avl-balance').innerText)
+  
+
+  if(userNumber.length <11 ){
+    alert('please check your number')
+    return
+  }
+  if(userPin !== creatPinNumber){
+    alert('please check your pin ')
+    return;
+  }
+  const totalNewAmount = avlBalance - userAmount
+  document.getElementById('avl-balance').innerText =totalNewAmount
 })
