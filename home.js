@@ -170,6 +170,7 @@ document.getElementById('add-button')
   document.getElementById('Transfer-Money-parent').style.display ='none'
    document.getElementById('get-bonus-parent').style.display ='none'
    document.getElementById('pay-bill-parent').style.display ='none'
+     document.getElementById('transcation-parent').style.display ='none'
   document.getElementById('add-money-parent').style.display ='block'
 })
 document.getElementById('cash-button')
@@ -178,6 +179,7 @@ document.getElementById('cash-button')
     document.getElementById('Transfer-Money-parent').style.display ='none'
      document.getElementById('get-bonus-parent').style.display ='none'
      document.getElementById('pay-bill-parent').style.display ='none'
+       document.getElementById('transcation-parent').style.display ='none'
   document.getElementById('cash-out-parent').style.display ='block'
   
 })
@@ -188,6 +190,7 @@ document.getElementById('transfer-button')
   document.getElementById('cash-out-parent').style.display ='none'
    document.getElementById('get-bonus-parent').style.display ='none'
    document.getElementById('pay-bill-parent').style.display ='none'
+     document.getElementById('transcation-parent').style.display ='none'
   document.getElementById('Transfer-Money-parent').style.display ='block'
   
 })
@@ -197,6 +200,7 @@ document.getElementById('get-bonus-button')
   document.getElementById('cash-out-parent').style.display ='none'
   document.getElementById('Transfer-Money-parent').style.display ='none'
   document.getElementById('pay-bill-parent').style.display ='none'
+  document.getElementById('transcation-parent').style.display ='none'
   document.getElementById('get-bonus-parent').style.display ='block'
   
 })
@@ -207,6 +211,17 @@ document.getElementById('pay-bill-button')
   document.getElementById('cash-out-parent').style.display ='none'
   document.getElementById('Transfer-Money-parent').style.display ='none'
   document.getElementById('get-bonus-parent').style.display ='none'
+  document.getElementById('transcation-parent').style.display ='none'
   document.getElementById('pay-bill-parent').style.display ='block'
+  
+})
+document.getElementById('transcations-button')
+.addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display ='none'
+  document.getElementById('cash-out-parent').style.display ='none'
+  document.getElementById('Transfer-Money-parent').style.display ='none'
+  document.getElementById('get-bonus-parent').style.display ='none'
+  document.getElementById('pay-bill-parent').style.display ='none'
+  document.getElementById('transcation-parent').style.display ='block'
   
 })
