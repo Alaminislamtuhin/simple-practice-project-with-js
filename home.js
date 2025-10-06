@@ -30,17 +30,20 @@ document.getElementById('btn-add')
 
 })
 
+// click button and block or none button//
 
 document.getElementById('add-button')
 .addEventListener('click', function(){
   document.getElementById('cash-out-parent').style.display ='none'
   document.getElementById('Transfer-Money-parent').style.display ='none'
+   document.getElementById('get-bonus-parent').style.display ='none'
   document.getElementById('add-money-parent').style.display ='block'
 })
 document.getElementById('cash-button')
 .addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display ='none'
     document.getElementById('Transfer-Money-parent').style.display ='none'
+     document.getElementById('get-bonus-parent').style.display ='none'
   document.getElementById('cash-out-parent').style.display ='block'
   
 })
@@ -49,7 +52,16 @@ document.getElementById('transfer-button')
 .addEventListener('click', function(){
     document.getElementById('add-money-parent').style.display ='none'
   document.getElementById('cash-out-parent').style.display ='none'
+   document.getElementById('get-bonus-parent').style.display ='none'
   document.getElementById('Transfer-Money-parent').style.display ='block'
+  
+})
+document.getElementById('get-bonus-button')
+.addEventListener('click', function(){
+    document.getElementById('add-money-parent').style.display ='none'
+  document.getElementById('cash-out-parent').style.display ='none'
+  document.getElementById('Transfer-Money-parent').style.display ='none'
+  document.getElementById('get-bonus-parent').style.display ='block'
   
 })
 
@@ -95,6 +107,7 @@ document.getElementById('btn-transfer')
   const userPin = parseInt(document.getElementById('transfer-pin').value)
 
   const avlBalance =parseInt(document.getElementById('avl-balance').innerText)
+
   
 
   if(userNumber.length <11 ){
@@ -107,4 +120,35 @@ document.getElementById('btn-transfer')
   }
   const totalNewAmount = avlBalance - userAmount
   document.getElementById('avl-balance').innerText =totalNewAmount
+})
+
+// get bonus//
+const couponCode ='BONUS50'
+
+document.getElementById('btn-get-bonus')
+.addEventListener('click', function(e){
+  e.preventDefault()
+ 
+  const getBonus =document.getElementById('get-bonus-coupon').value.trim()
+
+
+  const avlBalance = parseInt(document.getElementById('avl-balance').innerText)
+  const bonusAmount = 50;
+  const totalNewAmount = avlBalance + bonusAmount
+
+   document.getElementById('avl-balance').innerText =totalNewAmount
+   
+   if(getBonus===couponCode){
+     alert('add bonus successfully')
+  return
+    
+   }
+  else{
+    alert('please keep your coupon code')
+    return
+   }
+
+   
+    
+ 
 })
